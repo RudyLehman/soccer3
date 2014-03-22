@@ -48,7 +48,8 @@ var app = {
     },
 
     takePicture: function() {
-      navigator.camera.getPicture( function( imageURI ) {
+      navigator.camera.getPicture(
+      function( imageURI ) {
         alert( imageURI );
       },
       function( message ) {
@@ -64,6 +65,19 @@ var app = {
         alert("Orientation");
         window.plugins.orientationchanger.lockOrientation('landscape');
         var currentOrientation = window.plugins.orientationchanger.getOrientation();
-        alert(currentOrientation);
+    },
+
+    scanBarcode: function() {
+        cordova.plugins.barcodeScanner.scan(
+            function (result) {
+                alert("We got a barcode\n" +
+                    "Result: " + result.text + "\n" +
+                    "Format: " + result.format + "\n" +
+                    "Cancelled: " + result.cancelled);
+            },
+            function (error) {
+                alert("Scanning failed: " + error);
+            }
+        );
     }
 };
