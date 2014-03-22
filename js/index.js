@@ -102,7 +102,7 @@ var app = {
     },
     vibrate: function(){
 
-        navigator.notification.beep;
+        navigator.notification.alert;
         navigator.notification.vibrate(2500);
 
     }
