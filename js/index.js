@@ -61,13 +61,15 @@ var app = {
       });
     },
 
-    setOrientation: function() {
-        window.plugins.orientationchanger.lockOrientation('landscape');
-        var currentOrientation = window.plugins.orientationchanger.getOrientation();
-        alert(currentOrientation);
-    },
+//    setOrientation: function() {
+//        window.plugins.orientationchanger.lockOrientation('landscape');
+//        var currentOrientation = window.plugins.orientationchanger.getOrientation();
+//        alert(currentOrientation);
+//    },
 
     scanBarcode: function() {
+        var scanner = cordova.plugins.barcodeScanner;
+
         cordova.plugins.barcodeScanner.scan(
             function (result) {
                 alert("We got a barcode\n" +
