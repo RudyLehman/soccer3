@@ -24,6 +24,7 @@
     <gap:plugin name="org.apache.cordova.core.camera" />
     <gap:plugin name="com.phonegap.plugins.barcodescanner" />
     <gap:plugin name="com.boyvanderlaak.cordova.plugin.orientationchanger" />
+    <gap:plugin name="nl.x-services.plugins.flashlight" />
 
     <feature name="http://api.phonegap.com/1.0/battery"/>
     <feature name="http://api.phonegap.com/1.0/camera"/>
@@ -33,6 +34,5 @@
     <feature name="http://api.phonegap.com/1.0/media"/>
     <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/notification"/>
-    <gap:plugin name="nl.x-services.plugins.flashlight" />
 
 </widget>
