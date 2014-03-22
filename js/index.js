@@ -34,6 +34,9 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+
+        window.plugins.orientationchanger.lockOrientation('landscape');
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -44,7 +47,7 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
+        //console.log('Received Event: ' + id);
     },
 
     takePicture: function() {
