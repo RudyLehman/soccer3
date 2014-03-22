@@ -34,9 +34,6 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-
-        window.plugins.orientationchanger.lockOrientation('landscape');
-
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -61,5 +58,9 @@ var app = {
         quality: 50,
         destinationType: Camera.DestinationType.FILE_URI
       });
+    },
+
+    setOrientation: function() {
+        window.plugins.orientationchanger.lockOrientation('landscape');
     }
 };
