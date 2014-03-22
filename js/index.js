@@ -61,6 +61,9 @@ var app = {
     },
 
     setOrientation: function() {
-        window.plugins.orientationchanger.lockOrientation('landscape');
+        alert("Orientation");
+        //window.plugins.orientationchanger.lockOrientation('landscape');
+        var currentOrientation = window.plugins.orientationchanger.getOrientation();
+        alert(currentOrientation);
     }
 };
