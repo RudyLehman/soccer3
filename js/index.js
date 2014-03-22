@@ -62,13 +62,13 @@ var app = {
     },
 
     setOrientation: function() {
-        alert("Orientation");
         window.plugins.orientationchanger.lockOrientation('landscape');
         var currentOrientation = window.plugins.orientationchanger.getOrientation();
+        alert(currentOrientation);
     },
 
     scanBarcode: function() {
-        cordova.plugins.barcodeScanner.scan(
+        window.plugins.barcodeScanner.scan(
             function (result) {
                 alert("We got a barcode\n" +
                     "Result: " + result.text + "\n" +
