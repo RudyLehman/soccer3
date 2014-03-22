@@ -68,7 +68,7 @@ var app = {
     },
 
     scanBarcode: function() {
-        window.plugins.barcodeScanner.scan(
+        cordova.plugins.barcodeScanner.scan(
             function (result) {
                 alert("We got a barcode\n" +
                     "Result: " + result.text + "\n" +
