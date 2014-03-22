@@ -67,6 +67,26 @@ var app = {
 //        alert(currentOrientation);
 //    },
 
+    getLocation: function(){
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position){
+                latitud = position.coords.latitude;
+                longitud = position.coords.longitude;
+                alert(latitud);
+            }, function (error) {
+                alert("GeoLocation error: " + error);
+            }, {
+                maximumAge: 3000,
+                timeout: 15000,
+                enableHighAccuracy: true
+            });
+
+        } else {
+            alert("Oops! Your browser does not support geolocation. Chrome download, it's free!");
+        }
+
+    },
+
     scanBarcode: function() {
         cordova.plugins.barcodeScanner.scan(
             function (result) {
